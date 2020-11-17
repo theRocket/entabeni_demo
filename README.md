@@ -17,7 +17,10 @@ postgres:
   password: supersecret
 ```
 
-* Database initialization
+* Database initialization:
+```
+rails db:create db:migrate db:seed
+```
 
 * How to run the test suite
 
