@@ -1,7 +1,9 @@
 # README
 
 This README documents the steps necessary to get the
-application up and running.
+application up and running, or visit the demo on Heroku:
+
+[https://frozen-fjord-60818.herokuapp.com/](https://frozen-fjord-60818.herokuapp.com/)
 
 * Ruby version: 2.6.6, Rails 6.0.3 (I use [rbenv](https://github.com/rbenv/rbenv))
 
