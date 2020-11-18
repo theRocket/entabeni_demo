@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: entabeni_demo
-  username: <%= Rails.application.credentials.postgres[:user] %>
-  password: <%= Rails.application.credentials.postgres[:password] %>
+  # username: <%= Rails.application.credentials.postgres[:user] %>
+  # password: <%= Rails.application.credentials.postgres[:password] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
