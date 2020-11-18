@@ -34,3 +34,5 @@
 /config/credentials/development.key
 /node_modules/*
 !/node_modules/.yarn-integrity
+
+/config/credentials/test.key

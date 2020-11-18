@@ -12,7 +12,8 @@ ryan = User.create!(
 lood = User.create!(
   email: "lood@entabenisystems.com",
   name_first: "Lood",
-  name_last: "Adriaanse"
+  name_last: "Adriaanse",
+  phone: "3175083348"
 )
 
 Faker::Config.locale = 'en-US'
