@@ -24,7 +24,11 @@ postgres:
   user: yourname
   password: supersecret
 ```
-
+__Note__: There is an issue deploying on Heroku with this new Rails 6 syntax (for environment-specific encrypted credentials) in the `database.yml` file, so it is removed prior to deployment:
+```
+  username: <%= Rails.application.credentials.postgres[:user] %>
+  password: <%= Rails.application.credentials.postgres[:password] %>
+```
 * __Local database initialization:__
 ```
 rails db:create db:migrate db:seed
@@ -48,3 +52,25 @@ Roger,Daltry,360-599-2224,rogerdaltry@daltry.com
 Susan,Smith,(360) 599-2225,mrssmith@grannysmith.com
 Floy,Ella,360.599.2223,floyella@memorials.com
 ```
+* __Screenshots of working demo__:
+
+GraphiQL query of all Users on Heroku ([try yourself](https://frozen-fjord-60818.herokuapp.com/graphiql)):
+<img src="./docs/images/graphiql_queryUsers_Heroku.png" width="500"/>
+
+Showing the GraphQL custom scalar that formats phones on Query result:
+<img src="./docs/images/graphiql_queryUsers_typesPhoneEmail_coerce.png" width="800"/>
+
+Imported CSV segregating data (using ActiveRecord validation) and returning errors to user:
+![CSV Form validation](./docs/images/CSVfileUpload_phoneErrors.png)
+
+Same result on Heroku ([try yourself](https://frozen-fjord-60818.herokuapp.com)):
+<img src="./docs/images/CSVfileUpload_phoneErrors_Heroku.png" width="400"/>
+
+After db:seed on Heroku Postgres instance (Lood asked if I had dealt with multi-tenancy. The better answer is yes, as a client, not the host):
+<img src="./docs/images/pgAdmin_Userscreated_Heroku_seed.png" width="600"/>
+
+The result of imported data (3 valid records from example at bottom) combined with seed data on Heroku Postgres instance:
+<img src="./docs/images/pgAdmin_Userscreated_Heroku_import.png" width="600"/>
+
+
+
