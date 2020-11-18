@@ -26,6 +26,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'faker', '~> 2.14.0'
   # A development utility to test GraphQL queries.
 gem 'graphiql-rails'
+# telehone validator
+gem 'telephone_number', '~> 1.4.9'
+gem 'email_address', '~> 0.1.18'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
