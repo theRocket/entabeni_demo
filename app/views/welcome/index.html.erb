@@ -2,3 +2,31 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<%= form_tag  '/users/fileupload', multipart: true do %>
+  <label for="file">Provide a CSV file of Users</label> <%= file_field_tag "file" %>
+  <div><%= submit_tag 'Upload' %></div>
+<% end %>
+
+<% if !@result.nil? && @result.num_inserts>0 %>
+  <div>
+    <h4>Succesfully imported records: <%= @result.ids.length() %></h4>
+  </div>
+<% end %>
+
+<% if !@result.nil? && @result.failed_instances.any? %>
+  <div>
+    <h4>Found errors with this data:</h4>
+  </div>
+  <div>
+    <ul>
+      <% @result.failed_instances.each do |user| %>
+          <li>
+            <%= user.name_first %>, <%= user.name_last %><br />
+            <!-- <%= user.phone %>, <%= user.email %> --> 
+            Reason: <%= user.errors.messages %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

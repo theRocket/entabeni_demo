@@ -31,11 +31,20 @@ rails db:create db:migrate db:seed
 ```
 
 * __How to run the test suite:__
-tbd
+bundle exec rspec
 
 * __Deployment instructions:__ 
 modify `main` branch
 push to remote `heroku`
 (uses puma via `Procfile`)
 
-* ...
+* __Create Users with CSV file__
+upload button available at home page (root of app)
+format expected (in any order) with valid US phones and emails: 
+```
+First,Last,Phone,Email
+Bob,Jones,360.599.2221,bobjones@jones.com
+Roger,Daltry,360-599-2224,rogerdaltry@daltry.com
+Susan,Smith,(360) 599-2225,mrssmith@grannysmith.com
+Floy,Ella,360.599.2223,floyella@memorials.com
+```

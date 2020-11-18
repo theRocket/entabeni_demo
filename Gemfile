@@ -17,6 +17,14 @@ gem 'sass-rails', '~> 6'
 # gem 'webpacker', '~> 5.x'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# sampled for file uploads, but not needed
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors', '~> 1.1.1'
+# gem 'carrierwave', '~> 2.1.0'
+# for file parsing and record creation
+gem 'activerecord-import', '~> 1.0.7'
+gem 'csv', '~> 3.1.8'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -35,9 +43,6 @@ gem 'email_address', '~> 0.1.18'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
 
 group :test do
   gem 'factory_bot_rails', '~> 6.1.0'

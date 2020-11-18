@@ -29,6 +29,13 @@ module EntabeniDemo
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins '*'
+    #     resource '*', :headers => :any, :methods => [:get, :post, :options]
+    #   end
+    # end
+    
     # suggested for Heroku - see https://stackoverflow.com/questions/32815705/heroku-pgconnectionbad-could-not-connect-to-server-connection-refused/32815724#32815724
     # config.assets.initialize_on_precompile = false
 
