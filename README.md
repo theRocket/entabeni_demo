@@ -3,15 +3,21 @@
 This README documents the steps necessary to get the
 application up and running, or visit the demo on Heroku:
 
-[https://frozen-fjord-60818.herokuapp.com/](https://frozen-fjord-60818.herokuapp.com/)
+[frozen-fjord-60818.herokuapp.com](https://frozen-fjord-60818.herokuapp.com/)
 
-* Ruby version: 2.6.6, Rails 6.0.3 (I use [rbenv](https://github.com/rbenv/rbenv))
+[Live GraphiQL Editor](https://frozen-fjord-60818.herokuapp.com/graphiql/)
 
-* System dependencies: PostgreSQL
+* __Ruby version:__ 2.6.6 (I use [rbenv](https://github.com/rbenv/rbenv))
+* __Rails version:__ 6.0.3 
 
-* Configuration: bundle install && yarn install
+* __System dependencies:__ PostgreSQL (brew install postgresql)
 
-* Database creation: entabeni_demo with user and password added to development environment using Rails 6 [custom credentials](https://github.com/rails/rails/pull/33521).
+* __Configuration:__
+bundle install && yarn install
+
+* __Local database creation:__
+PostgreSQL create `entabeni_demo` with user and password created
+Same creds added to development environment using Rails 6 [custom credentials](https://github.com/rails/rails/pull/33521).
 Edited with `rails credentials:edit --environment development`
 ```
 postgres:
@@ -19,15 +25,17 @@ postgres:
   password: supersecret
 ```
 
-* Database initialization:
+* __Local database initialization:__
 ```
 rails db:create db:migrate db:seed
 ```
 
-* How to run the test suite
+* __How to run the test suite:__
+tbd
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* __Deployment instructions:__ 
+modify `main` branch
+push to remote `heroku`
+(uses puma via `Procfile`)
 
 * ...
