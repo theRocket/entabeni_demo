@@ -30,7 +30,7 @@ module EntabeniDemo
     # the framework and any gems in your application.
     
     # suggested for Heroku - see https://stackoverflow.com/questions/32815705/heroku-pgconnectionbad-could-not-connect-to-server-connection-refused/32815724#32815724
-    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
