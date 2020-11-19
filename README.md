@@ -36,7 +36,7 @@ rails db:create db:migrate db:seed
 
 * __Deployment instructions:__ <br/>- modify `main` branch<br/>- push to remote `heroku` (uses puma via `Procfile`)
 
-* __Create Users with CSV file__<br/> - upload button available at home page (root of app)<br/>- format expected (in any order) with valid US phones and emails: 
+* __Create Users with CSV file__<br/> - upload button available at [app home page](https://frozen-fjord-60818.herokuapp.com/)<br/>- format expected (in any order) with valid US phones and emails: 
 ```
 First,Last,Phone,Email
 Bob,Jones,360.599.2221,bobjones@jones.com
