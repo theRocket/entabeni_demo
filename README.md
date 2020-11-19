@@ -1,9 +1,9 @@
 # README
 
 This README documents the steps necessary to get the
-application up and running, or visit the demo on Heroku:
+application up and running, or visit the:
 
-[frozen-fjord-60818.herokuapp.com](https://frozen-fjord-60818.herokuapp.com/)
+[Live demo on Heroku](https://frozen-fjord-60818.herokuapp.com/)
 
 [Live GraphiQL Editor](https://frozen-fjord-60818.herokuapp.com/graphiql/)
 
