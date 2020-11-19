@@ -16,9 +16,7 @@ application up and running, or visit the demo on Heroku:
 bundle install && yarn install
 
 * __Local database creation:__
-PostgreSQL create `entabeni_demo` with user and password created
-Same creds added to development environment using Rails 6 [custom credentials](https://github.com/rails/rails/pull/33521).
-Edited with `rails credentials:edit --environment development`
+PostgreSQL create `entabeni_demo` with user and password created<br/>Same creds added to development environment using Rails 6 [custom credentials](https://github.com/rails/rails/pull/33521).<br/>Edited with `rails credentials:edit --environment development`
 ```
 postgres:
   user: yourname
@@ -34,17 +32,11 @@ __Note__: There is an issue deploying on Heroku with this new Rails 6 syntax (fo
 rails db:create db:migrate db:seed
 ```
 
-* __How to run the test suite:__
-bundle exec rspec
+* __How to run the test suite:__<br/>- bundle exec rspec
 
-* __Deployment instructions:__ 
-modify `main` branch
-push to remote `heroku`
-(uses puma via `Procfile`)
+* __Deployment instructions:__ <br/>- modify `main` branch<br/>- push to remote `heroku` (uses puma via `Procfile`)
 
-* __Create Users with CSV file__
-upload button available at home page (root of app)
-format expected (in any order) with valid US phones and emails: 
+* __Create Users with CSV file__<br/> - upload button available at home page (root of app)<br/>- format expected (in any order) with valid US phones and emails: 
 ```
 First,Last,Phone,Email
 Bob,Jones,360.599.2221,bobjones@jones.com
@@ -57,7 +49,7 @@ Floy,Ella,360.599.2223,floyella@memorials.com
 GraphiQL query of all Users on Heroku ([try yourself](https://frozen-fjord-60818.herokuapp.com/graphiql)):<br/>
 <img src="./docs/images/graphiql_queryUsers_Heroku.png" width="500"/>
 
-Showing the GraphQL custom scalar that formats phones on Query result:<br?>
+Showing the GraphQL custom scalar that formats phones on Query result:<br/>
 <img src="./docs/images/graphiql_queryUsers_typesPhoneEmail_coerce.png" width="800"/>
 
 Imported CSV segregating data (using ActiveRecord validation) and returning errors to user:
